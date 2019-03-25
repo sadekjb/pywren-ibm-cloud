@@ -1,6 +1,9 @@
 ### First build new image from the Dockerfile (link)
 ### for prepared docker image use:
 	sadek/pywren-sj:3.6
+### Register model and generate stubs:
+	dClayTool.sh NewModel HelloCarsPythonUser pys3cr3tp4ssw0rd Cars_ns13 cars_model python
+	dClayTool.sh GetStubs HelloCarsPythonUser pys3cr3tp4ssw0rd Cars_ns13 cars_stubs
 ### Add stubs and config folder to pywren directory
 ### run deploy_runtime script:
 	./deploy_runtime create <repository>/<name>
