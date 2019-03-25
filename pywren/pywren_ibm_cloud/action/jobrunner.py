@@ -31,6 +31,12 @@ from pywren_ibm_cloud.wrenutil import get_current_memory_usage
 from pywren_ibm_cloud.storage.backends.cos import COSBackend
 from pywren_ibm_cloud.storage.backends.swift import SwiftBackend
 
+##DataClay##
+from dataclay.api import init, finish
+
+# Init dataClay session
+init()
+
 
 pickling_support.install()
 level = logging.DEBUG
@@ -225,7 +231,8 @@ class jobrunner:
 
             if self.show_memory:
                 logger.debug("Memory usage after output serialization: {}".format(get_current_memory_usage()))
-        
+            
+            finish() 
         except Exception as e:
             exc_type, exc_value, exc_traceback = sys.exc_info()
             #traceback.print_tb(exc_traceback)
@@ -269,6 +276,7 @@ class jobrunner:
                 output_upload_timestamp_t2 = time.time()
                 self.stats.write("output_upload_time",
                            output_upload_timestamp_t2 - output_upload_timestamp_t1)
+            finish()
 
 if __name__ == '__main__':
     logger.info("Jobrunner started")
