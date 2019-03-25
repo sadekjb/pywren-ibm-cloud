@@ -1,4 +1,4 @@
-### First build new image from the [Dockerfile] (../../runtime/Dockerfile)
+### First build new image from the [Dockerfile](../../runtime/Dockerfile)
 ### for prepared docker image use:
 	sadek/pywren-sj:3.6
 ### Register model and generate stubs:
