@@ -34,7 +34,7 @@ class COSBackend:
     """
 
     def __init__(self, cos_config):
-        service_endpoint = cos_config.get('endpoint').replace('http:', 'https:')
+        service_endpoint = cos_config.get('endpoint')#.replace('http:', 'https:')
 
         if 'api_key' in cos_config:
             client_config = ibm_botocore.client.Config(signature_version='oauth',
