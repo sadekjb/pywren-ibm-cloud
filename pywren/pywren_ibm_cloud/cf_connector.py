@@ -85,7 +85,7 @@ class CloudFunctions:
         cfexec['code'] = base64.b64encode(code).decode("utf-8") if is_binary else code
         data['exec'] = cfexec
 
-        res = self.session.put(url, json=data)
+        res = self.session.put(url, json=data, verify=False)
 
         if res.status_code != 200:
             print('An error occurred updating action {}'.format(action_name))
@@ -135,7 +135,7 @@ class CloudFunctions:
                            self.namespace, 'actions', action_name)
 
         try:
-            resp = self.session.post(url, json=payload)
+            resp = self.session.post(url, json=payload, verify=False)
             data = resp.json()
             resp_time = format(round(resp.elapsed.total_seconds(), 3), '.3f')
             if 'activationId' in data:
