@@ -4,7 +4,7 @@ Create PyWren runtime action with DataClay APIs suuport, and support for the spe
 	dClayTool.sh NewModel HelloCarsPythonUser pys3cr3tp4ssw0rd Cars_ns13 cars_model python
 	dClayTool.sh GetStubs HelloCarsPythonUser pys3cr3tp4ssw0rd Cars_ns13 cars_stubs
 	
-	Add stubs and config folder to pywren directory
+###### Add stubs and config folders to pywren directory
 ###### Build an image and Deploy runtime following with [instructions]( ../../runtime/README.md) and [Dockerfile](../../runtime/Dockerfile) getting ibmcf_pywren.zip file
 ###### For pre-built docker image use: sadek/pywren-sj:3.6
 ###### Create runtime action:
