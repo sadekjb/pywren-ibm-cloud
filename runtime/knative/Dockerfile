@@ -7,6 +7,7 @@ WORKDIR $APP_HOME
 ADD https://github.com/sadekjb/pywren-ibm-cloud/tree/kn-dev/pywren_ibm_cloud ./pywren_ibm_cloud
 
 ADD https://github.com/sadekjb/pywren-ibm-cloud/tree/kn-dev/runtime/knative/app.py ./app.py
+ADD https://github.com/sadekjb/pywren-ibm-cloud/tree/kn-dev/runtime/knative/service.yaml ./service.yaml
 
 RUN pip install Flask gunicorn
 
