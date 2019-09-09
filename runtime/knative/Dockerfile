@@ -6,7 +6,7 @@ WORKDIR $APP_HOME
 
 COPY pywren_ibm_cloud ./pywren_ibm_cloud
 
-COPY runtime/knative ./
+COPY runtime/knative/app.py ./
 
 RUN pip install Flask gunicorn
 
