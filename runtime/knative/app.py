@@ -4,10 +4,9 @@ import sys
 import pkgutil
 import os
 from pywren_ibm_cloud.runtime.function_handler.handler import function_handler
+from flask import Flask, request, jsonify
 
 logger = logging.getLogger('__main__')
-
-from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
