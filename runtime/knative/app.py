@@ -21,7 +21,6 @@ def pywren_task():
 
 @app.route('/preinstalls', methods=['POST'])
 def preinstalls_task():
-
     logger.info("Starting Knative execution")
     print("Extracting preinstalled Python modules...")
     runtime_meta = dict()
@@ -29,7 +28,6 @@ def preinstalls_task():
     runtime_meta['preinstalls'] = [entry for entry in sorted([[mod, is_pkg] for _, mod, is_pkg in mods])]
     python_version = sys.version_info
     runtime_meta['python_ver'] = str(python_version[0])+"."+str(python_version[1])
-
     return jsonify(runtime_meta)
 
 
